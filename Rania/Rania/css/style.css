@@ -1,0 +1,200 @@
+/* Custom Styles for Dompet Aman v2.0 */
+
+:root {
+    --color-safe: #22C55E;
+    --color-warning: #F59E0B;
+    --color-danger: #EF4444;
+    --color-primary: #3B82F6;
+    --color-background: #F9FAFB;
+    --color-success: #10B981;
+    --color-info: #0EA5E9;
+    --color-purple: #A855F7;
+    --color-pink: #EC4899;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Styling */
+.nav-item {
+    color: #6B7280;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.nav-item.active {
+    background-color: #DBEAFE;
+    color: #3B82F6;
+    font-weight: 600;
+}
+
+.nav-item:hover {
+    background-color: #F3F4F6;
+}
+
+.nav-item-mobile {
+    color: #6B7280;
+    transition: all 0.2s ease;
+}
+
+.nav-item-mobile.active {
+    background-color: #DBEAFE;
+    color: #3B82F6;
+    border-radius: 0.5rem;
+}
+
+/* Page Content */
+.page-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Status Badge Colors */
+.status-safe {
+    background-color: var(--color-safe);
+    color: white;
+}
+
+.status-warning {
+    background-color: var(--color-warning);
+    color: white;
+}
+
+.status-danger {
+    background-color: var(--color-danger);
+    color: white;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Transaction Item */
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.transaction-item:hover {
+    background-color: #F9FAFB;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Currency Formatting */
+.currency {
+    font-feature-settings: "tnum" 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.currency-lg {
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-feature-settings: "tnum" 1;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    main {
+        margin-bottom: 5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        margin-left: 16rem;
+    }
+}
+
+/* Smooth Transitions */
+.transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Button Styling */
+button {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Input Focus States */
+input:focus,
+select:focus {
+    outline: none;
+    ring-width: 2px;
+}
+
+/* Helper Classes */
+.text-muted {
+    color: #6B7280;
+}
+
+.text-small {
+    font-size: 0.875rem;
+}
+
+.text-body {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Animations */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-in {
+    animation: slideInUp 0.3s ease-out;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+    h1 { font-size: 1.875rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+}

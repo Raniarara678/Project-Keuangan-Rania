@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-safe: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #1f2937;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+/* Card styles */
+.card {
+  @apply rounded-2xl bg-white shadow-sm border border-gray-100;
+}
+
+.card-lg {
+  @apply rounded-3xl bg-white shadow-md border border-gray-100;
+}
+
+/* Text styles */
+.heading-lg {
+  @apply text-3xl font-bold text-slate-900;
+}
+
+.heading-md {
+  @apply text-xl font-semibold text-slate-900;
+}
+
+.heading-sm {
+  @apply text-base font-semibold text-slate-900;
+}
+
+.text-body {
+  @apply text-base text-slate-600;
+}
+
+.text-small {
+  @apply text-sm text-slate-500;
+}
+
+.text-muted {
+  @apply text-xs text-slate-400;
+}
+
+/* Currency display */
+.currency {
+  @apply font-semibold text-slate-900 tabular-nums;
+}
+
+.currency-lg {
+  @apply text-3xl font-bold text-slate-900 tabular-nums;
+}
+
+/* Status indicators */
+.status-safe {
+  @apply text-safe-600;
+}
+
+.status-warning {
+  @apply text-warning-600;
+}
+
+.status-danger {
+  @apply text-danger-600;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  @apply transition-all duration-300 ease-out;
+}
+
+/* Focus states */
+@layer components {
+  .btn-focus {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .input-focus {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+}
